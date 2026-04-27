@@ -1,0 +1,38 @@
+.food-display {
+    margin-top: 30px;
+}
+
+.food-display h2 {
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+}
+
+/* ✅ Scroll without breaking UI */
+.food-scroll-container {
+    max-height: 550px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Optional scrollbar style */
+.food-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.food-scroll-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* ✅ Grid layout */
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* No result */
+.no-food {
+    margin-top: 20px;
+    color: gray;
+}

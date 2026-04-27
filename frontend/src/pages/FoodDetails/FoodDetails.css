@@ -1,0 +1,385 @@
+.food-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10%;
+  background: #fafafa;
+}
+
+.food-details-container {
+  display: flex;
+  gap: 50px;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* LEFT */
+.food-gallery {
+  flex: 1;
+  max-width: 500px;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.main-img:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.thumbnail-row img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* RIGHT */
+.food-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 100px;
+}
+
+.price {
+  font-size: 26px;
+  color: #ff4c24;
+  font-weight: 600;
+}
+
+.delivery {
+  color: #777;
+}
+
+/* VEG BADGE */
+.veg, .nonveg {
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.veg {
+  color: green;
+  background: #eaffea;
+}
+
+.nonveg {
+  color: red;
+  background: #ffeaea;
+}
+
+/* ADDONS */
+.addons {
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.spice-level {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* QUANTITY */
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.quantity button:hover {
+  background: #ff4c24;
+  color: white;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.cart-btn {
+  padding: 12px 22px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+}
+
+.order-btn {
+  padding: 12px 22px;
+  background: #ff4c24;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+/* REVIEWS */
+.reviews-section {
+  max-width: 1200px;
+  margin-top: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.review {
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* REVIEW FORM */
+.add-review {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-review input,
+.add-review textarea,
+.add-review select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.review-btn {
+  background: #ff4c24;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .food-details-container {
+    flex-direction: column;
+  }
+
+  .food-info {
+    position: static;
+  }
+}.food-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10%;
+  background: #fafafa;
+}
+
+.food-details-container {
+  display: flex;
+  gap: 50px;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* LEFT */
+.food-gallery {
+  flex: 1;
+  max-width: 500px;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.main-img:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.thumbnail-row img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* RIGHT */
+.food-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 100px;
+}
+
+.price {
+  font-size: 26px;
+  color: #ff4c24;
+  font-weight: 600;
+}
+
+.delivery {
+  color: #777;
+}
+
+/* VEG BADGE */
+.veg, .nonveg {
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.veg {
+  color: green;
+  background: #eaffea;
+}
+
+.nonveg {
+  color: red;
+  background: #ffeaea;
+}
+
+/* ADDONS */
+.addons {
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.spice-level {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* QUANTITY */
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.quantity button:hover {
+  background: #ff4c24;
+  color: white;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.cart-btn {
+  padding: 12px 22px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+}
+
+.order-btn {
+  padding: 12px 22px;
+  background: #ff4c24;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+/* REVIEWS */
+.reviews-section {
+  max-width: 1200px;
+  margin-top: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.review {
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* REVIEW FORM */
+.add-review {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-review input,
+.add-review textarea,
+.add-review select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.review-btn {
+  background: #ff4c24;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .food-details-container {
+    flex-direction: column;
+  }
+
+  .food-info {
+    position: static;
+  }
+}

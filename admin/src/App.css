@@ -1,0 +1,29 @@
+/* Layout container */
+.app {
+  width: 100%;
+}
+
+/* Navbar spacing */
+.app hr {
+  display: none;
+}
+
+/* Main layout */
+.app-content {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: calc(100vh - 60px);
+  background: #1f2937;
+}
+
+/* Main content area */
+.main {
+  flex: 1;
+  padding: 20px;
+  background: #f3f4f6;
+  min-height: calc(100vh - 60px);
+} 
