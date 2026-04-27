@@ -27,7 +27,7 @@ const Chatbot = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:4000/api/chat", {
+      const res = await fetch("https://foodelio.onrender.com/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: msg })
@@ -40,11 +40,11 @@ const Chatbot = () => {
         { text: data.reply, sender: "bot" },
         ...(data.items
           ? [
-              {
-                sender: "bot",
-                items: data.items
-              }
-            ]
+            {
+              sender: "bot",
+              items: data.items
+            }
+          ]
           : [])
       ]);
 
@@ -113,7 +113,7 @@ const Chatbot = () => {
           {/* Suggestions */}
           <div className="quick-suggestions">
             <span onClick={() => sendMessage("pizza")}>🍕 Pizza</span>
-            <span onClick={() => sendMessage("veg food")}>🥗 Veg</span>\
+            <span onClick={() => sendMessage("veg food")}>🥗 Veg</span>
           </div>
 
           {/* Input */}

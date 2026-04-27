@@ -7,7 +7,7 @@ const ExploreMenu = ({ category, setCategory }) => {
 
   const [categories, setCategories] = useState([])
 
-  const BASE_URL = "http://localhost:4000" // ✅ backend URL
+  const BASE_URL = "https://foodelio.onrender.com" // ✅ backend URL
 
   // 🔥 Category → Image Mapping
   const categoryImages = {
