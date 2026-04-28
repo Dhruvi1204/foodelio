@@ -20,7 +20,11 @@ const port = 4000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: "https://foodelio.netlify.app"
+  origin: [
+    "http://localhost:5173",
+    "https://frabjous-banoffee-8f85d1.netlify.app"
+  ],
+  credentials: true
 }));
 
 
