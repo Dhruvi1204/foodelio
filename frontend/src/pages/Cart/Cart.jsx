@@ -79,20 +79,13 @@ const Cart = () => {
           </div>
 
           <button
-  style={{
-    position: "fixed",
-    bottom: "50px",
-    left: "50px",
-    zIndex: 99999,
-    padding: "10px 20px"
-  }}
-  onClick={() => {
-    alert("CLICK WORKING");
-    window.location.href = "/order";
-  }}
->
-  TEST BUTTON
-</button>
+            onClick={() => {
+              console.log("clicked");
+              window.location.href = "/order";
+            }}
+          >
+            PROCEED TO CHECKOUT
+          </button>
         </div>
 
         <div className="cart-promocode">
