@@ -79,13 +79,19 @@ const Cart = () => {
           </div>
 
           <button
-  style={{ position: "relative", zIndex: 9999 }}
+  style={{
+    position: "fixed",
+    bottom: "50px",
+    left: "50px",
+    zIndex: 99999,
+    padding: "10px 20px"
+  }}
   onClick={() => {
-    console.log("clicked");
-    window.location.href = "/order"; // force redirect
+    alert("CLICK WORKING");
+    window.location.href = "/order";
   }}
 >
-  PROCEED TO CHECKOUT
+  TEST BUTTON
 </button>
         </div>
 
