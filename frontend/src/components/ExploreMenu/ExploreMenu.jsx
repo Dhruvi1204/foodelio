@@ -7,7 +7,6 @@ const ExploreMenu = ({ category, setCategory }) => {
 
   const [categories, setCategories] = useState([])
 
-  const BASE_URL = "https://foodelio.onrender.com" // ✅ backend URL
 
   // 🔥 Category → Image Mapping
   const categoryImages = {
@@ -23,29 +22,32 @@ const ExploreMenu = ({ category, setCategory }) => {
     noodles: assets.menu_8,
   }
 
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const res = await axios.get(`${BASE_URL}/api/food/list`)
+const BASE_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:4000"
+    : "https://foodelio.onrender.com";
 
-        console.log("API DATA:", res.data)
+useEffect(() => {
+  const fetchCategories = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/api/food/list`);
 
-        if (!res.data || !res.data.data) return
+      if (!res.data || !res.data.data) return;
 
-        const uniqueCategories = [
-          "All",
-          ...new Set(res.data.data.map(item => item.category))
-        ]
+      const uniqueCategories = [
+        "All",
+        ...new Set(res.data.data.map(item => item.category))
+      ];
 
-        setCategories(uniqueCategories)
+      setCategories(uniqueCategories);
 
-      } catch (error) {
-        console.log(error)
-      }
+    } catch (error) {
+      console.log(error);
     }
+  };
 
-    fetchCategories()
-  }, [])
+  fetchCategories();
+}, []);
 
   return (
     <div className='explore-menu' id='explore-menu'>

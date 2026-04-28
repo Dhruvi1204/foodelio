@@ -27,7 +27,7 @@ const Chatbot = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("https://foodelio.onrender.com/api/chat", {
+      const res = await fetch(`${BASE_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: msg })

@@ -6,7 +6,10 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
 
     // API URL
-    const url = "https://foodelio.onrender.com";
+    const url =
+  window.location.hostname === "localhost"
+    ? "http://localhost:4000"
+    : "https://foodelio.onrender.com";
 
     // STATES
     const [food_list, setFoodList] = useState([]);
