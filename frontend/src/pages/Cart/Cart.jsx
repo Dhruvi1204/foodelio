@@ -78,9 +78,15 @@ const Cart = () => {
             </div>
           </div>
 
-          <button onClick={() => navigate('/order')}>
-            PROCEED TO CHECKOUT
-          </button>
+          <button
+  style={{ position: "relative", zIndex: 9999 }}
+  onClick={() => {
+    console.log("clicked");
+    window.location.href = "/order"; // force redirect
+  }}
+>
+  PROCEED TO CHECKOUT
+</button>
         </div>
 
         <div className="cart-promocode">
