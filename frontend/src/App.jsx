@@ -42,7 +42,7 @@ const App = () => {
         </Routes>
 
       </div>
-      <Chatbot />
+      {/* <Chatbot /> */}
       <Footer />
     </>
   )
