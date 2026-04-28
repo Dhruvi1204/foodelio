@@ -10,17 +10,23 @@ const MyOrders = () => {
   const [data, setData] = useState([]);
 
   const fetchOrders = async () => {
-    const response = await axios.post(url + "/api/order/userOrders", {}, { headers: { token } });
+    const response = await axios.post(
+  url + "/api/order/userorders",
+  {},
+  { headers: { token } }
+);
      console.log(response.data);
     setData(response.data.data);
 
   }
 
-  useEffect(() => {
-    if (token) {
-      fetchOrders();
-    }
-  }, [token])
+useEffect(() => {
+  console.log("TOKEN:", token);
+
+  if (token) {
+    fetchOrders();
+  }
+}, [token]);
 
   return (
     <div className='my-orders'>
