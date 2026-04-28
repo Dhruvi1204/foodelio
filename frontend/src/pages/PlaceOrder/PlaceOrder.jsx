@@ -104,13 +104,12 @@ const PlaceOrder = () => {
 
   };
 
-  useEffect(() => {
-
-    if (!token) {
-      navigate("/cart");
-    }
-
-  }, [token]);
+useEffect(() => {
+  if (!token) {
+    alert("Please login first");
+    navigate("/cart");
+  }
+}, [token]);
 
   const subtotal = directFood
     ? directFood.price * directQuantity
